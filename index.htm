@@ -1,51 +1,104 @@
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <html>
 <head>
     <title>SVEIN SIN HJEMMESIDE</title>
     <style>
         body {
-            background-color: yellow;
+            background-color: #1a1a1a;
             font-family: Geneva, sans-serif;
             margin: 20px;
+            color: #ccc;
         }
         h1 {
-            color: green;
+            color: #8B0000;
             font-size: 5em;
-            font-family: 'Brush Script MT', cursive;
+            font-family: 'Creepster', cursive, 'Brush Script MT', cursive;
             margin: 20px 0;
+            text-shadow: 3px 3px 8px #000;
+            text-align: center;
+            letter-spacing: 3px;
         }
         h2 {
-            color: green;
+            color: #FF4500;
             font-size: 2em;
             font-family: Arial, sans-serif;
             margin: 30px 0 15px 0;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .blood-text {
+            color: #8B0000;
+            font-family: 'Creepster', cursive;
+            font-size: 6em;
+            text-align: center;
+            text-shadow: 
+                0 0 5px #8B0000,
+                0 0 10px #8B0000,
+                0 0 15px #FF0000,
+                0 0 20px #FF0000;
+            animation: blood-drip 2s infinite alternate;
+        }
+        @keyframes blood-drip {
+            0% { text-shadow: 0 0 5px #8B0000, 0 0 10px #8B0000; }
+            100% { text-shadow: 0 0 15px #8B0000, 0 5px 20px #FF0000, 5px 10px 30px #8B0000; }
         }
         img {
             margin: 10px 0;
             display: block;
+            border: 2px solid #8B0000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
         }
         iframe {
             margin: 20px 0;
             display: block;
+            border: 2px solid #8B0000;
+            border-radius: 10px;
         }
         .links {
             margin: 30px 0;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #8B0000;
         }
         .links a {
             display: block;
             margin: 10px 0;
-            color: blue;
+            color: #FF6347;
             font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #FF0000;
+            text-shadow: 0 0 5px #FF0000;
         }
         .audio-player {
             margin: 30px 0;
             width: 100%;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            border: 2px solid #8B0000;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .halloween-title {
+            background: linear-gradient(45deg, #8B0000, #FF4500, #8B0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 10px;
+            margin: 20px 0;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>SVEIN SIN HJEMMESIDE</h1>
+    <div class="blood-text">SVEIN SIN HJEMMESIDE</div>
 
     <div class="images">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtbpovObPdPiuQPlv0kDs9zEi0ozgqo3lBow&usqp=CAU" alt="Bilde 1" width="200" height="300">
@@ -63,8 +116,8 @@
         <img src="https://i.postimg.cc/85Yr6Jc5/naadeloes2.jpg" alt="Naadeloes" width="910" height="1300">
     </div>
 
-    <h2>Brenn staten :)</h2>
-    <p>Velkommen!</p>
+    <h2 class="halloween-title">Brenn staten :)</h2>
+    <p>Velkommen til den blodige halloween-utgaven!</p>
 
     <div class="links">
         <h2>Her er noen morsomme lenker:</h2>
@@ -86,7 +139,7 @@
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Tov2xqNiPoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <h1>RAPHJØRNET</h1>
+    <div class="blood-text">RAPHJØRNET</div>
 
     <iframe width="100%" height="400" src="https://www.mixcloud.com/widget/iframe/?light=1&feed=%2Fhertugskule%2F808-madness-dansa-bastant-radio-rakel-8823%2F" frameborder="0"></iframe>
     <iframe width="100%" height="400" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fhertugskule%2Ftestmix%2F" frameborder="0"></iframe>
