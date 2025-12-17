@@ -4,156 +4,95 @@
     <title>SVEIN SIN HJEMMESIDE</title>
     <style>
         body {
-            background-color: #0a0a0a;
-            font-family: 'Courier New', monospace;
+            background-color: yellow;
+            font-family: Geneva, sans-serif;
             margin: 20px;
-            color: #ccc;
-            image-rendering: pixelated;
         }
+        /* KUN OVERSKRIFTER ENDRES */
         h1 {
             color: #ff0000;
-            font-size: 4em;
+            font-size: 5em;
             font-family: 'Courier New', monospace;
             margin: 20px 0;
             text-align: center;
-            letter-spacing: 2px;
             position: relative;
             text-shadow: 
-                2px 2px 0 #000,
-                4px 4px 0 #8B0000;
-        }
-        .blood-drip {
-            position: relative;
-            display: inline-block;
-        }
-        .blood-drip::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 20%;
-            width: 4px;
-            height: 30px;
-            background-color: #ff0000;
-            box-shadow: 
-                0 30px 0 #8B0000,
-                20px 50px 0 #ff0000,
-                -15px 70px 0 #8B0000,
-                10px 90px 0 #ff0000,
-                25px 110px 0 #8B0000;
-        }
-        h2 {
-            color: #ff5555;
-            font-size: 2em;
-            font-family: 'Courier New', monospace;
-            margin: 30px 0 15px 0;
-            border-bottom: 3px dotted #ff0000;
-            padding-bottom: 5px;
-        }
-        img {
-            margin: 10px 0;
-            display: block;
-            border: 4px solid #ff0000;
-            image-rendering: pixelated;
-        }
-        iframe {
-            margin: 20px 0;
-            display: block;
-            border: 4px solid #ff0000;
-        }
-        .links {
-            margin: 30px 0;
-            background-color: #111;
-            padding: 20px;
-            border: 3px dashed #ff0000;
-        }
-        .links a {
-            display: block;
-            margin: 10px 0;
-            color: #ff5555;
-            font-size: 1.2em;
-            text-decoration: none;
-            font-family: 'Courier New', monospace;
-            padding-left: 10px;
-            border-left: 4px solid #ff0000;
-        }
-        .links a:hover {
-            color: #ff0000;
-            background-color: #222;
-            padding: 5px;
-        }
-        .audio-player {
-            margin: 30px 0;
-            width: 100%;
-            background-color: #111;
-            border: 3px solid #ff0000;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #ddd;
-            border-left: 4px solid #ff0000;
-            padding-left: 10px;
-        }
-        .pixel-border {
-            border: 8px solid;
-            border-image: 
-                linear-gradient(45deg, #ff0000, #8B0000, #ff0000) 1;
-            image-rendering: pixelated;
-        }
-        .retro-title {
-            font-family: 'Courier New', monospace;
-            font-size: 6em;
-            color: #ff0000;
-            text-align: center;
-            margin: 40px 0;
-            position: relative;
+                3px 3px 0 #000,
+                6px 6px 0 #8B0000;
             animation: pixel-drip 3s infinite;
         }
         @keyframes pixel-drip {
             0%, 100% { 
                 text-shadow: 
-                    2px 2px 0 #000,
-                    4px 4px 0 #8B0000,
-                    6px 6px 0 #000;
+                    3px 3px 0 #000,
+                    6px 6px 0 #8B0000;
             }
             50% { 
                 text-shadow: 
-                    2px 2px 0 #000,
-                    4px 4px 0 #8B0000,
-                    6px 6px 0 #000,
+                    3px 3px 0 #000,
+                    6px 6px 0 #8B0000,
                     0px 8px 0 #ff0000,
                     15px 12px 0 #8B0000,
-                    -10px 16px 0 #ff0000;
+                    -10px 16px 0 #ff0000,
+                    25px 20px 0 #8B0000;
             }
         }
-        .drip-container {
+        h2 {
+            color: green;
+            font-size: 2em;
+            font-family: Arial, sans-serif;
+            margin: 30px 0 15px 0;
+        }
+        img {
+            margin: 10px 0;
+            display: block;
+        }
+        iframe {
+            margin: 20px 0;
+            display: block;
+        }
+        .links {
+            margin: 30px 0;
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            color: blue;
+            font-size: 1.2em;
+        }
+        .audio-player {
+            margin: 30px 0;
+            width: 100%;
+        }
+        /* Kun den store overskriften får drypp */
+        .pixel-title {
             position: relative;
-            text-align: center;
+            display: inline-block;
         }
-        .pixel-drip {
+        .pixel-title::after {
+            content: '';
             position: absolute;
+            bottom: -20px;
+            left: 15%;
             width: 4px;
-            height: 4px;
+            height: 20px;
             background-color: #ff0000;
-            animation: fall 2s infinite;
+            animation: drip-fall 2s infinite;
         }
-        @keyframes fall {
-            0% { transform: translateY(0); opacity: 0; }
-            10% { opacity: 1; }
-            100% { transform: translateY(200px); opacity: 0; }
+        @keyframes drip-fall {
+            0% { height: 0px; opacity: 1; }
+            100% { height: 60px; opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="drip-container">
-        <div class="retro-title">SVEIN SIN HJEMMESIDE</div>
-    </div>
+    <h1 class="pixel-title">SVEIN SIN HJEMMESIDE</h1>
 
     <div class="images">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtbpovObPdPiuQPlv0kDs9zEi0ozgqo3lBow&usqp=CAU" alt="Bilde 1" width="200" height="300" class="pixel-border">
-        <img src="https://i.pinimg.com/originals/13/93/3f/13933f3eabb6dae4d46eab49c95e3b0a.gif" alt="GIF" width="500" height="300" class="pixel-border">
-        <img src="https://www.starobserver.com.au/wp-content/uploads/2019/11/bikinihottie.jpg" alt="Bilde 2" width="200" height="300" class="pixel-border">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtbpovObPdPiuQPlv0kDs9zEi0ozgqo3lBow&usqp=CAU" alt="Bilde 1" width="200" height="300">
+        <img src="https://i.pinimg.com/originals/13/93/3f/13933f3eabb6dae4d46eab49c95e3b0a.gif" alt="GIF" width="500" height="300">
+        <img src="https://www.starobserver.com.au/wp-content/uploads/2019/11/bikinihottie.jpg" alt="Bilde 2" width="200" height="300">
     </div>
 
     <audio class="audio-player" controls autoplay loop>
@@ -161,13 +100,13 @@
     </audio>
 
     <div class="images">
-        <img src="https://i.postimg.cc/C12GBVVW/GALORE17.jpg" alt="GALORE17" width="910" height="1200" class="pixel-border">
-        <img src="https://i.postimg.cc/g20dq588/8-MARS.jpg" alt="8-MARS" width="910" height="600" class="pixel-border">
-        <img src="https://i.postimg.cc/85Yr6Jc5/naadeloes2.jpg" alt="Naadeloes" width="910" height="1300" class="pixel-border">
+        <img src="https://i.postimg.cc/C12GBVVW/GALORE17.jpg" alt="GALORE17" width="910" height="1200">
+        <img src="https://i.postimg.cc/g20dq588/8-MARS.jpg" alt="8-MARS" width="910" height="600">
+        <img src="https://i.postimg.cc/85Yr6Jc5/naadeloes2.jpg" alt="Naadeloes" width="910" height="1300">
     </div>
 
-    <h2 class="blood-drip">Brenn staten :)</h2>
-    <p>Velkommen til pixel-blod versjonen!</p>
+    <h2>Brenn staten :)</h2>
+    <p>Velkommen!</p>
 
     <div class="links">
         <h2>Her er noen morsomme lenker:</h2>
@@ -177,21 +116,19 @@
     </div>
 
     <div class="images">
-        <img src="https://media3.giphy.com/media/26gJy43Tfj5knzZyU/giphy.gif" alt="Fraktal" width="500" height="300" class="pixel-border">
-        <img src="https://media1.tenor.com/images/76962f9d74e63731b56455c93bbf5c32/tenor.gif" alt="Tenor GIF" width="500" height="300" class="pixel-border">
+        <img src="https://media3.giphy.com/media/26gJy43Tfj5knzZyU/giphy.gif" alt="Fraktal" width="500" height="300">
+        <img src="https://media1.tenor.com/images/76962f9d74e63731b56455c93bbf5c32/tenor.gif" alt="Tenor GIF" width="500" height="300">
     </div>
 
     <iframe src="https://player.vimeo.com/video/399855131" width="640" height="490" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     
     <div class="images">
-        <img src="https://i.postimg.cc/9XtYyNWW/OSSI.jpg" alt="OSSI" width="200" height="315" class="pixel-border">
+        <img src="https://i.postimg.cc/9XtYyNWW/OSSI.jpg" alt="OSSI" width="200" height="315">
     </div>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Tov2xqNiPoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <div class="drip-container">
-        <div class="retro-title">RAPHJØRNET</div>
-    </div>
+    <h1 class="pixel-title">RAPHJØRNET</h1>
 
     <iframe width="100%" height="400" src="https://www.mixcloud.com/widget/iframe/?light=1&feed=%2Fhertugskule%2F808-madness-dansa-bastant-radio-rakel-8823%2F" frameborder="0"></iframe>
     <iframe width="100%" height="400" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fhertugskule%2Ftestmix%2F" frameborder="0"></iframe>
@@ -201,4 +138,5 @@
 
 </body>
 </html>
+
 
